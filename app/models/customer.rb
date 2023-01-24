@@ -3,4 +3,6 @@ class Customer < ApplicationRecord
                         :email, :address, :city,
                         :state, :zip_code
 
+  has_many :customer_subscriptions
+  has_many :subscriptions, through: :customer_subscriptions
 end
