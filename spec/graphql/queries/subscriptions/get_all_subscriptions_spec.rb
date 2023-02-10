@@ -16,7 +16,7 @@ RSpec.describe Types::QueryType do
         expect(result["data"]).to be_a Hash
         expect(result["data"]).to have_key("subscriptions")
         expect(result["data"]["subscriptions"]).to be_a Array
-        expect(result["data"]["subscriptions"].count).to eq 3
+        expect(result["data"]["subscriptions"].count).to eq 4
   
         result["data"]["subscriptions"].each do |subscription|
           expect(subscription).to have_key("id")
