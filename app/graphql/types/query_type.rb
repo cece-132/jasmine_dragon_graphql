@@ -11,6 +11,9 @@ module Types
     field :teas, [Types::TeaType], null: false,
       description: "return a list of teas"
 
+    field :subscriptions, [Types::SubscriptionType], null: false,
+    description: "return a list of subscriptions"
+
     def teas
       Tea.all
     end
