@@ -181,7 +181,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
-  graphiql-rails
+  graphiql-rails (~> 1.4, >= 1.4.8)
   graphql (~> 2.0)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
