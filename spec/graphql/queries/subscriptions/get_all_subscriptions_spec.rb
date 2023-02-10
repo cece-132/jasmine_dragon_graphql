@@ -9,4 +9,18 @@ RSpec.describe Types::QueryType do
     sub4 = Subscription.create!(title: "Christmas Magic", price: 1300, status: "unavailable", frequency: "Seasonal")
   end
 
+  def query
+    <<~GQL
+    {
+      subscriptions {
+        id
+        title
+        price
+        status
+        frequency
+      }
+    }
+    GQL
+  end
+
 end
