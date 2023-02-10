@@ -4,15 +4,11 @@ module Types
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
 
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
-
-    # TODO: remove me
     field :teas, [Types::TeaType], null: false,
       description: "return a list of teas"
 
-    field :subscriptions, [Types::SubscriptionType], null: false,
-    description: "return a list of subscriptions"
+    # field :subscriptions, [Types::SubscriptionType], null: false,
+    # description: "return a list of subscriptions"
 
     def teas
       Tea.all
